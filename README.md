@@ -42,6 +42,7 @@ Before running this app make sure you have this installed on your puter :
 - [AWS S3](https://aws.amazon.com/s3/)
 - [AWS ECR](https://aws.amazon.com/ecr/)
 - [AWS ECS](https://aws.amazon.com/ecs/)
+- Linux/WSL
 
 ## 🎖Prerequisite
 
@@ -99,7 +100,19 @@ Before starting the application, you need to set up the following environment va
 - `AWS_S3_BUCKET_NAME`: AWS S3 Bucket Name
 - `AWS_REGION`: AWS Region (e.g. ap-southeast-1)
 
-2. **Database Migrations**
+2. **Run Database**
+
+You can run the database using Docker compose by run:
+```sh
+make db-up
+```
+
+and stop the the database by run:
+```sh
+make db-down
+```
+
+3. **Database Migrations**
 
 - Apply migrations to the database:
 
@@ -109,7 +122,7 @@ make migrate-dev
 
 ```
 
-3. **Running the Application**
+4. **Running the Application**
 
 ```bash {"id":"01HXBJ7XEECXDYSM92BNS4FSD8"}
 
